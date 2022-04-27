@@ -8,12 +8,7 @@ class TreeNode:
          self.left: TreeNode = left
          self.right: TreeNode = right
 class Solution:
-        """
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: bool
-        """    
-        def isSameTree(self, p, q):
+        def isSameTree(self, p: TreeNode, q: TreeNode):
 
             if not p and not q:
                 return True
@@ -24,7 +19,11 @@ class Solution:
             if p.val != q.val:
                 return False
                 
-            return self.isSameTree(p.right, q.right) and self.isSameTree(p.left, q.left)
+            same_left_tree = self.isSameTree(p.left, q.left)
+            same_right_tree = self.isSameTree(p.right, q.right)
+
+            result = same_right_tree and same_left_tree
+            return result
                 
 
         
