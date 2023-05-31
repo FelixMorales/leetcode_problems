@@ -16,6 +16,7 @@ class Solution:
                 max_len = subs_len
 
             d[c] = j + 1
+            print(d)
 
 
         return max_len
@@ -25,6 +26,6 @@ class Solution:
 
 sol = Solution()
 
-print(sol.lengthOfLongestSubstring("azbzabt"))
+print(sol.lengthOfLongestSubstring("azbzrtyt"))
 
 "anviaj"
